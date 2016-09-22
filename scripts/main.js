@@ -1,5 +1,6 @@
 var myImage = document.querySelector('img');
 
+if(myImage != null)
 myImage.onclick = function() {
     var mySrc = myImage.getAttribute('src');
     if(mySrc === 'images/shu.png') {
@@ -12,6 +13,7 @@ myImage.onclick = function() {
 
 var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h1');
+
 
 
 
@@ -30,5 +32,12 @@ if(!localStorage.getItem('name')) {
 }
 
 myButton.onclick = function() {
-  setUserName();
+  // setUserName();
+  goToMyPage();
 }
+
+function goToMyPage(){
+  var path = window.location.href;
+  path = path.substr(0, path.lastIndexOf('/') + 1)
+  window.location.href =  path + "mypage.html";
+} 
