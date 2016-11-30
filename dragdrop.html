@@ -22,7 +22,7 @@
         }
 
         function drop(ev) {
-            ev.preventDefault(); //加此句代码是为了阻止默认处理（drop 事件的默认行为是以链接形式打开）
+            ev.preventDefault(); //加此行代码是为了阻止默认处理（drop 事件的默认行为是以链接形式打开）
             var data = ev.dataTransfer.getData("myData");
             ev.target.appendChild(document.getElementById(data));
         }
