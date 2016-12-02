@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!--每30秒刷新-->
+    <!--<meta http-equiv="refresh" content="3">-->
+    <!--Duration的值为网页动态过渡的时间，单位为秒。 Transition是过渡方式，它的值为0到23，分别对应24种过渡方式。-->
+    <meta http-equiv="Page-Exit" contect="revealTrans(duration=1.0,transtion=0)">
+    <title>菜鸟教程(runoob.com)</title>
+    <style type="text/css">
+        #div1 {
+            width: 300px;
+            height: 200px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault(); //加此句代码是为了阻止默认处理  默认处理是不允许放置
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("myData", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault(); //加此句代码是为了阻止默认处理（drop 事件的默认行为是以链接形式打开）
+            var data = ev.dataTransfer.getData("myData");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+
+<body>
+    <p>拖动 W3CSchool.cc 图片到矩形框中:</p>
+    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+    <br/>
+    <!--换行-->
+    <b>这是黑体</b>
+    <i>这是斜体</i>
+    <code>电脑自动输出</code>
+    <p>这是<sub>上标</sub>这是<sup>下标</sup></p>
+    <p>这是<ins>插入</ins></p>
+    <p>这是<del>删除</del></p>
+
+    <a id="tips">有用的提示部分</a><br/>
+    <a href="#tips">访问有用的提示部分</a><br/>
+    <a href="http://www.runoob.com/html/html-links.html#tips">访问有用的提示部分</a>
+
+    <a href="http://www.runoob.com/html">访问有用的提示部分</a>
+
+    <br/>
+    <hr/>
+    <br/>
+    <br/>
+    <img id="drag1" src="images/t.png" title="这是图片" draggable="true" ondragstart="drag(event)" width="100" height="100">
+</body>
+
+</html>

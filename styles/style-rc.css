@@ -1,0 +1,10 @@
+h1 {
+  margin: 0;
+  padding: 20px 0;    
+  color: #00539F;
+  /*font: 'Open Sans', sans-serif;*/
+  font-family: 'Baloo Bhaina', cursive;
+  font-style: inherit;
+  text-align: center;
+  font-size: 60px;
+}
