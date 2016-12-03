@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
 <html lang="en-us">
 
 <head>
@@ -94,65 +92,4 @@
     </math>
 </body>
 
-=======
-<!DOCTYPE html>
-<html lang="en-us">
-
-<head>
-    <!--<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>-->
-    <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>-->
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
-    <link href='styles/style-rc.css' rel='stylesheet' type='text/css'>
-</head>
-
-<body>
-    <h1>This is my page!</h1>
-    <myHero>我的第一个新元素</myHero>
-    <script>
-            document.createElement("myHero");//新建自定义元素
-    </script>
-    <style>
-        myHero {
-            display: block;
-            background-color: #777;
-            padding: 50px;
-            font-size: 30px;
-        }
-    </style>
-    <canvas id="myCanvas" width="200" height="200" style="border:3px solid #000000;">
-    </canvas>
-    <script>
-var c=document.getElementById("myCanvas");
-var ctx=c.getContext("2d");
-// 填充
-ctx.fillStyle="#FF0000";
-ctx.fillRect(0,0,150,75);
-// 划线
-ctx.moveTo(0,0);
-ctx.lineTo(200,100);
-ctx.stroke();
-// 画圆
-ctx.beginPath();
-ctx.arc(95,50,40,0,2*Math.PI);
-ctx.stroke();
-// 画文字
-ctx.fillStyle="#FFFF00";//改变颜色
-ctx.font="30px Arial";
-ctx.fillText("Hello World",10,50);
-// 画空心文字
-ctx.font="30px Arial";
-ctx.strokeText("Hello World",10,100);
-
-/*画梯度渐变*/
-// Create gradient
-var grd=ctx.createLinearGradient(0,0,100,100);//45° 梯度渐变
-grd.addColorStop(0,"green");
-grd.addColorStop(1,"white");
-// Fill with gradient
-ctx.fillStyle=grd;
-ctx.fillRect(10,10,200,80);
-</script>
-</body>
-
->>>>>>> 1170afb930e97a703a221f0bf0a6da17706b90ae
 </html>
