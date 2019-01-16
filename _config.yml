@@ -1,0 +1,8 @@
+title: 若诚
+description: RC's BLOG
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
